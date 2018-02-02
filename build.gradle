@@ -1,0 +1,26 @@
+buildscript {
+    ext {
+        sourceCompatibility = 1.8
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        mavenLocal()
+    }
+}
+
+apply plugin: 'java'
+
+dependencies {
+    compile([
+            "com.google.guava:guava:22.0",
+            "io.prometheus:simpleclient:0.2.0"
+    ])
+
+    testCompile([
+            "junit:junit:4.12"
+    ])
+}
